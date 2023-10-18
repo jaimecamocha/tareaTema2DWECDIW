@@ -60,6 +60,6 @@ function mostrarInventario() {
     const resultadoInventario = document.getElementById("resultadoInventario");
     resultadoInventario.innerHTML = "INVENTARIO:<br>";
     for (const producto of inventario) {
-        resultadoInventario.innerHTML += `Nombre: ${producto.nombre}, Cantidad: ${producto.cantidad}, Precio: $${producto.precio} €<br>`;
+        resultadoInventario.innerHTML += `Nombre: ${producto.nombre}, Cantidad: ${producto.cantidad}, Precio: ${producto.precio}€<br>`;
     }
 }

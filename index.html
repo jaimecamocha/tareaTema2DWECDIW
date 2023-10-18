@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="icono.ico" type="image/icon-x">
-    <title>GESTIÓN DE INVENTARIO</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="icon" href="icono.ico" type="image/icon-x">
+        <title>GESTIÓN DE INVENTARIO</title>
+    </head>
+
 <body>
-    <h1>GESTIÓN DE INVENTARIO</h1>
+    <div class="container">
+        <h1>GESTIÓN DE INVENTARIO</h1>
 
-    <!-- Actualización del inventario -->
-    <h2>Introducir producto</h2>
-    <input type="text" id="nombre" placeholder="Nombre del producto">
-    <input type="number" id="cantidad" placeholder="Cantidad">
-    <input type="number" id="precio" placeholder="Precio">
-    <button onclick="agregarProducto()">Agregar producto</button>
+        <!-- Actualización del inventario -->
+        <h2>Introducir producto</h2>
+        <input type="text" id="nombre" placeholder="Nombre del producto">
+        <input type="number" id="cantidad" placeholder="Cantidad">
+        <input type="number" id="precio" placeholder="Precio">
+        <button onclick="agregarProducto()">Agregar producto</button>
 
+        <!-- Búsqueda de productos -->
+        <h2>Buscar producto</h2>
+        <input type="text" id="nombreBusqueda" placeholder="Producto a buscar">
+        <button onclick="buscarProducto()">Buscar producto</button>
+        <div id="resultadoBusqueda"></div>
 
-    <!-- Búsqueda de productos -->
-    <h2>Buscar producto</h2>
-    <input type="text" id="nombreBusqueda" placeholder="Nombre del producto a buscar">
-    <button onclick="buscarProducto()">Buscar producto</button>
-    <div id="resultadoBusqueda"></div>
+        <!-- Actualizar Inventario -->
+        <h2>Actualizar inventario</h2>
+        <input type="text" id="nombreActualizar" placeholder="Nombre del producto">
+        <input type="number" id="cantidadActualizar" placeholder="Cantidad a agregar">
+        <input type="number" id="precioActualizar" placeholder="Precio a actualizar">
+        <button onclick="actualizarInventario()">Actualizar inventario</button>
 
-    <!-- Actualizar Inventario -->
-    <h2>Actualizar inventario</h2>
-    <input type="text" id="nombreActualizar" placeholder="Nombre del producto">
-    <input type="number" id="cantidadActualizar" placeholder="Cantidad a agregar">
-    <input type="number" id="precioActualizar" placeholder="Precio a actualizar">
-    <button onclick="actualizarInventario()">Actualizar inventario</button>
+        <!-- Eliminación de productos -->
+        <h2>Eliminar producto</h2>
+        <input type="text" id="nombreEliminar" placeholder="Producto a eliminar">
+        <button onclick="eliminarProducto()">Eliminar producto</button>
 
-    <!-- Eliminación de productos -->
-    <h2>Eliminar producto</h2>
-    <input type="text" id="nombreEliminar" placeholder="Nombre del producto a eliminar">
-    <button onclick="eliminarProducto()">Eliminar producto</button>
+        <!-- Resumen del inventario -->
+        <h2>Resumen del inventario</h2>
+        <button onclick="mostrarInventario()">Mostrar inventario</button>
+        <div id="resultadoInventario"></div>
 
-    <!-- Resumen del inventario -->
-    <h2>Resumen del inventario</h2>
-    <button onclick="mostrarInventario()">Mostrar inventario</button>
-    <div id="resultadoInventario"></div>
+    </div>
 
     <script src="scripts/script.js"></script>
 </body>
