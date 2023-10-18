@@ -21,7 +21,7 @@ function buscarProducto() {
     const nombreBusqueda = document.getElementById("nombreBusqueda").value;
     for (const producto of inventario) {
         if (producto.nombre === nombreBusqueda) {
-            document.getElementById("resultadoBusqueda").textContent = `Nombre: ${producto.nombre}, Cantidad: ${producto.cantidad}, Precio: $${producto.precio}`;
+            document.getElementById("resultadoBusqueda").textContent = `Nombre: ${producto.nombre}, Cantidad: ${producto.cantidad}, Precio: ${producto.precio} €`;
             return;
         }
     }
