@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, #fff, #ccc);
+    background: linear-gradient(to bottom, #fff, #ccc); 
     display: flex;
     flex-direction: column;
     align-items: center;
