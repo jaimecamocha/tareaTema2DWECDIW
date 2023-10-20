@@ -20,6 +20,7 @@ h2 {
     text-shadow: 2px 2px 2px #fff;
 }
 
+
 button {
     background-color: #0074D9;
     color: #fff; 
@@ -35,4 +36,9 @@ input {
 
 #resultadoBusqueda, #resultadoInventario{
     font-size: 20px;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('assets/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
 }
