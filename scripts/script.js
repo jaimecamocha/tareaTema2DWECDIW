@@ -7,6 +7,8 @@ const inventario = [
     { id: 3, nombre: "Zapatos", cantidad: 20, precio: 50 },
 ];
 
+let tablaVisible = false;
+
 function agregarProducto() {
     const nombre = document.getElementById("nombre").value;
     const cantidad = parseInt(document.getElementById("cantidad").value);
@@ -72,3 +74,22 @@ function mostrarInventario() {
         precioCell.innerHTML = producto.precio + '€';
     }
 }
+
+function toggleTabla() {
+    const tabla = document.getElementById("tablaInventario");
+    const botonMostrar = document.querySelector('button[onclick="mostrarInventario()"]');
+
+    if (tablaVisible) {
+        tabla.style.display = "none";
+        botonMostrar.textContent = "Mostrar inventario";
+    } else {
+        tabla.style.display = "table";
+        botonMostrar.textContent = "Ocultar inventario";
+    }
+
+    tablaVisible = !tablaVisible;
+}
+
+document.getElementById("tablaInventario").style.display = "none";
+
+document.querySelector('button[onclick="mostrarInventario()"]').addEventListener("click", toggleTabla);
