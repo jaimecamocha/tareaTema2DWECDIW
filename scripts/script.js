@@ -16,7 +16,7 @@ function agregarProducto() {
 
     inventario.push({ nombre, cantidad, precio });
 
-    mostrarInventario(); 
+    mostrarInventario();
 }
 
 function buscarProducto() {
@@ -39,24 +39,36 @@ function actualizarInventario() {
         if (producto.nombre === nombreActualizar) {
             producto.cantidad += cantidadActualizar;
             producto.precio = precioActualizar;
+            mostrarInventario();
             return;
         }
     }
 
     inventario.push({ nombre: nombreActualizar, cantidad: cantidadActualizar, precio: precioActualizar });
-    mostrarInventario();
+    mostrarInventario(); 
 }
 
 function eliminarProducto() {
     const nombreEliminar = document.getElementById("nombreEliminar").value;
+    let eliminado = false;
+
     for (let i = 0; i < inventario.length; i++) {
         if (inventario[i].nombre === nombreEliminar) {
             inventario.splice(i, 1);
-            i--;
+            eliminado = true;
+            break;
         }
     }
 
-    mostrarInventario();
+    mostrarInventario(); 
+
+    const mensajeEliminar = document.getElementById("mensajeEliminar");
+
+    if (eliminado) {
+        mensajeEliminar.textContent = "Producto eliminado correctamente";
+    } else {
+        mensajeEliminar.textContent = "No se ha podido eliminar el producto";
+    }
 }
 
 function mostrarInventario() {
@@ -71,7 +83,7 @@ function mostrarInventario() {
 
         nombreCell.innerHTML = producto.nombre;
         cantidadCell.innerHTML = producto.cantidad;
-        precioCell.innerHTML = producto.precio + '€';
+        precioCell.innerHTML = producto.precio;
     }
 }
 

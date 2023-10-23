@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: auto;
-    margin: 0;
+    margin: 0 auto 50px auto;
 }
 
 .container {
@@ -46,7 +46,7 @@ input {
 #tablaInventario {
     border-collapse: collapse;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto 40px auto;
 }
 
 #tablaInventario th {
