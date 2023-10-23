@@ -7,7 +7,7 @@ const inventario = [
     { id: 3, nombre: "Zapatos", cantidad: 20, precio: 50 },
 ];
 
-let tablaVisible = false;
+let tablaVisible = false; 
 
 function agregarProducto() {
     const nombre = document.getElementById("nombre").value;
